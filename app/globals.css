@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Clash Display SemiBold";
+  src: url("../public/assets/fonts/ClashDisplay_Semibold.otf");
+}
+
+@font-face {
+  font-family: "Lato Regular";
+  src: url("../public/assets/fonts/Lato-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  background: rgb(29, 0, 78);
+  background: linear-gradient(
+    53deg,
+    rgba(29, 0, 78, 1) 0%,
+    #0b0718 50%,
+    rgb(26, 22, 83) 100%
+  );
+  color: #fff;
+  background-image: url(../public/assets/images/bg-main.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  font-family: "Lato Regular", sans-serif;
+  overflow-x: hidden;
+}
+
+.global-padding {
+  @apply px-10 max-sm:px-4 max-md:px-6 max-lg:px-10 max-xl:px-12;
+}
+
+.global-flex {
+  @apply flex max-lg:flex-col;
+}
+
+.global-title {
+  @apply text-[52px] max-sm:text-[32px] max-md:text-[40px] max-lg:text-[46px] max-xl:text-[52px];
+}
+
+.global-subheading {
+  @apply text-[28px] max-sm:text-[18px] max-md:text-[20px] max-lg:text-[24px] max-xl:text-[28px];
+}
+
+.button-text {
+  @apply text-[16px] max-sm:text-[14px] max-md:text-[14px] max-lg:text-[16px] max-xl:text-[16px];
+}
+
+.hero-title {
+  @apply text-[80px] max-sm:text-[36px] max-md:text-[45px] max-lg:text-[50px] max-xl:text-[80px];
+}
+
+.hero-sub {
+  @apply text-[50px] max-sm:text-[20px] max-md:text-[24px] max-lg:text-[30px] max-xl:text-[60px];
+}
+
+.footer-heading {
+  @apply text-[100px] max-sm:text-[28px] max-md:text-[38px] max-lg:text-[46px] max-xl:text-[60px];
+}
+
+.footer-email {
+  @apply text-[52px] max-sm:text-[20px] max-md:text-[24px] max-lg:text-[28px] max-xl:text-[52px];
+}
+
+.project-size {
+  @apply w-[400px] h-[300px] max-md:w-[500px] max-md:h-[300px] max-lg:w-[500px] max-lg:h-[300px];
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Clash Display SemiBold", sans-serif;
+}
+
+p {
+  font-family: "Lato Regular", sans-serif;
+  @apply text-[14px] max-sm:text-[14px] max-md:text-[16px] max-lg:text-[14px] max-xl:text-[14px];
+}
+
+a,
+li {
+  font-family: "Clash Display Semibold", sans-serif;
+  font-size: 16px;
+}
+
+.custom-font {
+  font-family: "Clash Display SemiBold", sans-serif;
+}
+
+.bg-hero {
+  background-image: url(../public/assets/images/bg-main-dark.png);
+}
+
+.bg-gradient {
+  background: rgb(57, 0, 153);
+  background: linear-gradient(
+    55deg,
+    rgba(57, 0, 153, 1) 0%,
+    rgba(158, 0, 89, 1) 25%,
+    rgba(255, 0, 84, 1) 50%,
+    rgba(255, 84, 0, 1) 75%,
+    rgba(255, 189, 0, 1) 100%
+  );
+}
+
+.text-gradient {
+  background: rgb(10, 0, 153);
+  background: linear-gradient(
+    90deg,
+    rgb(149, 0, 255) 8%,
+    rgba(158, 0, 89, 1) 35%,
+    rgba(255, 0, 84, 1) 60%,
+    rgba(255, 84, 0, 1) 70%,
+    rgba(255, 189, 0, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+input,
+textarea {
+  @apply custom-font w-full rounded-md bg-slate-900 border-gray-400 px-4 py-2 text-white placeholder:text-gray-600;
+}
+
+.glass {
+  background: rgba(14, 22, 126, 0.01);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Spotlight Card */
+
+.card-spotlight {
+  position: relative;
+  border-radius: 1rem;
+  border: 1px solid #222;
+  background-color: #111;
+  overflow: hidden;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+  --spotlight-color: rgba(255, 7, 247, 0.05);
+}
+
+.card-spotlight::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at var(--mouse-x) var(--mouse-y),
+    var(--spotlight-color),
+    transparent 30%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.card-spotlight:hover::before,
+.card-spotlight:focus-within::before {
+  opacity: 0.6;
+}
+
+.enterAnimation {
+  animation: scaleDown 0.5s ease 0s 1 normal forwards;
+}
+
+@keyframes scaleDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
