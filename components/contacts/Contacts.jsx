@@ -2,8 +2,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-import { FaBehanceSquare, FaLinkedin, FaGithubSquare } from "react-icons/fa";
-import { FaSquareInstagram } from "react-icons/fa6";
 import { GoArrowDownRight } from "react-icons/go";
 import {
   containerXReverse,
@@ -12,74 +10,77 @@ import {
   containerVariants,
   childXVariants,
 } from "@/data/animation";
+import TertiaryButton from "@/ui/buttons/TertiaryButton";
 
 const Contacts = () => {
   return (
     <div
       id="contacts"
-      className="w-full glass  flex flex-col global-padding pt-[300px] pb-[50px] border border-t border-slate-700"
+      className="w-full glass flex flex-col justify-center items-center global-padding pt-[100px] pb-[100px] max-md:pt-[100px] "
     >
       <motion.h2
         whileInView="show"
         variants={containerXReverse}
         initial="hidden"
-        className="footer-heading uppercase flex gap-4 items-center"
+        className="footer-heading uppercase flex flex-col gap-4 items-center"
       >
-        <motion.span variants={childXReverse}>LET'S GET IN TOUCH</motion.span>
-        <motion.span
+        {/* <motion.span
           variants={childVariants}
           transition={{ delay: 1 }}
           className="px-4 bg-orange-500 rounded-full hover:bg-black hover:text-orange-500 duration-300"
         >
           <GoArrowDownRight />
+        </motion.span> */}
+        <motion.span variants={childVariants} className="fade-text-title">
+          LET'S GET IN TOUCH!
         </motion.span>
       </motion.h2>
       <motion.div
         whileInView="show"
         variants={containerXReverse}
         initial="hidden"
-        className="w-full flex flex-col gap-6"
+        className="w-full flex flex-col justify-center items-center gap-6"
       >
         <motion.div variants={childXVariants}>
           <Link
             href="mailto:gemsolis.dev@gmail.com"
-            className="footer-email underline"
+            className="footer-email underline fade-text-title"
           >
             gemsolis.dev@gmail.com
           </Link>
         </motion.div>
 
-        <div className="flex gap-10 items-center">
+        <div className="flex gap-3 items-center">
           <motion.div
             whileInView="show"
             variants={containerXReverse}
             initial="hidden"
             className="flex gap-4 text-orange-500"
           >
-            <Link
-              href=""
-              className="text-3xl hover:scale-110 hover:text-white duration-300"
-            >
-              <FaSquareInstagram />
-            </Link>
-            <Link
-              href=""
-              className="text-3xl hover:scale-110 hover:text-white duration-300"
-            >
-              <FaLinkedin />
-            </Link>
-            <Link
-              href=""
-              className="text-3xl hover:scale-110 hover:text-white duration-300"
-            >
-              <FaBehanceSquare />
-            </Link>
-            <Link
-              href=""
-              className="text-3xl hover:scale-110 hover:text-white duration-300"
-            >
-              <FaGithubSquare />
-            </Link>
+            <motion.div variants={childVariants}>
+              <TertiaryButton
+                title="Instagram"
+                url="https://www.instagram.com/gem.dsgn"
+              />
+            </motion.div>
+            <motion.div variants={childVariants}>
+              <TertiaryButton
+                title="Behance"
+                url="https://www.behance.net/gemdev"
+              />
+            </motion.div>
+            <motion.div variants={childVariants}>
+              <TertiaryButton
+                title="LinkedIn"
+                url="https://www.linkedin.com/in/abigaelgem"
+              />
+            </motion.div>
+            <motion.div variants={childVariants}>
+              <TertiaryButton
+                title="Github"
+                url="https://github.com/gemsolisdev"
+              />
+            </motion.div>
           </motion.div>
         </div>
       </motion.div>

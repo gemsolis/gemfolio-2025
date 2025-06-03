@@ -8,48 +8,41 @@ const services = [
     title: "Social Media Management",
     description:
       "Let’s boost your brand online with creative, engaging posts that connect with your audience. From crafting attention-grabbing content to building authentic interactions, I’m here to ensure your social media presence grows stronger and leaves a lasting impression.",
-    icon: <FaConnectdevelop size={40} />, // Explicit size
+    icon: <FaConnectdevelop size={85} />,
   },
   {
     id: 2,
-    title: "UX Design",
+    title: "User Experience Design",
     description:
       "Transforming your ideas into intuitive, user-friendly digital experiences is my specialty. I focus on designs that not only look great but also provide seamless functionality, keeping your users engaged and delighted every step of the way.",
-    icon: <MdOutlineDesignServices size={40} />,
-  },
-  {
-    id: 3,
-    title: "Administrative",
-    description:
-      "Let me handle the organization and details so you can focus on the bigger picture. From scheduling to streamlining workflows, I’m dedicated to making your day easier and your business operations smoother and stress-free.",
-    icon: <FaBook size={40} />,
+    icon: <MdOutlineDesignServices size={85} />,
   },
   {
     id: 4,
     title: "Web Development",
     description:
-      "Your vision deserves a website that’s both beautiful and functional. I create responsive, modern designs tailored to your goals, ensuring your online presence stands out and provides the perfect platform for your business to grow.",
-    icon: <MdDeveloperBoard size={40} />,
+      "Your vision deserves more than just a website—it deserves a digital experience that’s both stunning and strategically built to support your goals. I specialize in creating responsive, modern web designs that not only look beautiful on every device but also function seamlessly to enhance user experience. Whether you're launching a brand, expanding your reach, or refreshing your current site, I tailor every design to reflect your unique identity and connect with your target audience.",
+    icon: <MdDeveloperBoard size={85} />,
   },
 ];
 
 const ServicesCard = () => {
   return (
     <>
-      <div className="w-full flex justify-center gap-4 max-lg:flex-col">
+      <div className="w-full flex justify-center gap-4 global-flex">
         {services.slice(0, 2).map((service, index) => (
-          <div key={service.id} className="w-full flex gap-4">
+          <div key={service.id} className="w-full flex gap-4 ">
             <SpotlightCard
-              className="custom-spotlight-card hover:rotate-1 duration-300 cursor-pointer"
+              className="custom-spotlight-card glass"
               spotlightColor="rgba(1, 78, 186, 0.424)"
             >
-              <div className="w-full h-[420px] p-10 flex flex-col items-start gap-6 rounded-md ">
+              <div className="w-full p-10 max-md:p-4 flex flex-col items-start gap-6 rounded-md">
                 <span>{service.icon}</span>
                 <div className="flex flex-col gap-2">
-                  <h3 className="text-2xl text-orange-500">{service.title}</h3>
-                  <p className="text-gray-300 text-[12px]">
-                    {service.description}
-                  </p>
+                  <h3 className="global-subheading fade-gradient">
+                    {service.title}
+                  </h3>
+                  <p className="text-slate-400">{service.description}</p>
                 </div>
               </div>
             </SpotlightCard>
@@ -57,21 +50,19 @@ const ServicesCard = () => {
         ))}
       </div>
       <div className="w-full flex justify-center gap-4 max-lg:flex-col">
-        {services.slice(-2).map((service, index) => (
+        {services.slice(-1).map((service, index) => (
           <div key={service.id} className="w-full flex gap-4">
             <SpotlightCard
-              className="custom-spotlight-card hover:rotate-1 duration-300 cursor-pointer "
+              className="custom-spotlight-card glass"
               spotlightColor="rgba(1, 78, 186, 0.424)"
             >
-              <div className="w-full h-[420px] p-10 flex flex-col items-start gap-6 rounded-md">
-                <div className="relative rounded-md h-auto w-full text-[100px] text-white">
-                  {service.icon}
-                </div>
+              <div className="w-full p-10 max-md:p-4 flex flex-col items-start gap-6 rounded-md ">
+                <span>{service.icon}</span>
                 <div className="flex flex-col gap-2">
-                  <h3 className="text-2xl text-orange-500">{service.title}</h3>
-                  <p className="text-gray-300 text-[12px]">
-                    {service.description}
-                  </p>
+                  <h3 className="global-subheading fade-gradient">
+                    {service.title}
+                  </h3>
+                  <p className="text-slate-400">{service.description}</p>
                 </div>
               </div>
             </SpotlightCard>

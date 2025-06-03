@@ -4,14 +4,21 @@ export const containerVariants = {
     opacity: 1,
     transition: {
       staggerChildren: 0.2,
-      delayChildren: 0.2,
+      delayChildren: 0.3,
     },
   },
 };
 
 export const childVariants = {
-  hidden: { opacity: 0, y: -40 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+  hidden: { opacity: 0, y: 20 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.4,
+      ease: "easeOut",
+    },
+  },
 };
 
 export const containerXVariants = {
@@ -19,7 +26,7 @@ export const containerXVariants = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren: 0.3,
       delayChildren: 0.2,
     },
   },
@@ -35,7 +42,7 @@ export const containerXReverse = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren: 0.3,
       delayChildren: 0.2,
     },
   },
@@ -43,7 +50,11 @@ export const containerXReverse = {
 
 export const childXReverse = {
   hidden: { opacity: 0, x: 40 },
-  show: { opacity: 1, x: 0, transition: { duration: 0.3 } },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: { staggerChildren: 0.5, delayChildren: 0.2 },
+  },
 };
 
 export const titleXContainer = {
@@ -67,7 +78,7 @@ export const titleYContainer = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren: 0.3,
       delayChildren: 0.2,
     },
   },

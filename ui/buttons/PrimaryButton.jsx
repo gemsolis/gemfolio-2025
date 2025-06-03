@@ -1,13 +1,17 @@
-import Link from "next/link";
+import { IoSearchSharp } from "react-icons/io5";
 
-const PrimaryButton = ({ title, link }) => {
+const PrimaryButton = ({ title, url }) => {
   return (
-    <Link
-      href="/"
-      className="bg-black button-text border-white border text-white px-6 py-2 rounded-md hover:scale-105 duration-500 cursor-pointer"
+    <a
+      href={url}
+      target="_blank"
+      className="bg-black button-text border-slate-400 border text-white py-2 px-2  rounded-md hover:scale-110 duration-300 cursor-pointer flex gap-2 items-center"
     >
-      {title}
-    </Link>
+      <span className="text-white">{title}</span>
+      <span className="text-black bg-white rounded-md p-2">
+        <IoSearchSharp />
+      </span>
+    </a>
   );
 };
 

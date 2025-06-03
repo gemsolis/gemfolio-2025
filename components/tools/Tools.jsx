@@ -1,51 +1,46 @@
 "use client";
 import Image from "next/image";
-
-import {
-  containerXVariants,
-  childXVariants,
-  containerXReverse,
-  childXReverse,
-} from "@/data/animation";
 import { motion } from "framer-motion";
+
+import { containerVariants, childVariants } from "@/data/animation";
 import { tools } from "@/data/dataArray";
 import Title from "@/ui/title/Title";
 
 const Tools = () => {
   return (
-    <div id="tools" className="w-full mb-[200px] px-10 max-lg:px-2 flex">
+    <div
+      id="tools"
+      className="w-full mb-[200px] flex global-padding scroll-margin"
+    >
       <motion.div
-        whileInView="show"
-        variants={containerXVariants}
+        variants={containerVariants}
         initial="hidden"
-        className="w-full glass p-10 rounded-md flex flex-col gap-2 max-lg:items-center"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.2 }}
+        className="w-full glass p-10 rounded-md flex flex-col gap-2 max-lg:items-center border border-t border-slate-700"
       >
         <div className="flex justify-center mb-10">
-          <Title
-            title="Tools and Tech Stack"
-            subheading="I'm Using Behind My Work"
-          />
+          <Title title="Tools and Tech" subheading="I'm Using Behind My Work" />
         </div>
+
         {tools.map(({ category, items }, index) => (
-          <motion.div
+          <div
             key={index}
-            variants={childXVariants}
-            className="w-full flex justify-between items-center gap-6 border-b border-gray-500 px-10 py-4 max-lg:flex-col max-lg:items-center max-lg:px-4"
+            className="w-full flex flex-wrap justify-center items-center gap-4 px-10 py-4  max-lg:px-2"
           >
-            <motion.h3 variants={childXVariants} className="text-2xl">
-              {category}
-            </motion.h3>
-            <motion.div
-              variants={containerXReverse}
-              className="flex items-center gap-6"
-            >
-              {items.map(({ src, alt, width }, i) => (
-                <motion.div key={i} variants={childXReverse}>
-                  <Image src={src} width={width} alt={alt} />
-                </motion.div>
-              ))}
-            </motion.div>
-          </motion.div>
+            {items.map(({ src, alt, width }, i) => (
+              <motion.div
+                key={i}
+                variants={childVariants}
+                className="flex items-center gap-4 px-4 py-2 glass rounded-md border-b border-slate-700"
+              >
+                <Image src={src} width={width} alt={alt} />
+                <span className="text-lg max-md:text-sm text-slate-100 custom-font">
+                  {alt}
+                </span>
+              </motion.div>
+            ))}
+          </div>
         ))}
       </motion.div>
     </div>

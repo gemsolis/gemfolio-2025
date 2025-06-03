@@ -1,13 +1,17 @@
-import Link from "next/link";
+import { GrLinkNext } from "react-icons/gr";
 
-const SecondaryButton = ({ title }) => {
+const SecondaryButton = ({ title, url, link_target }) => {
   return (
-    <Link
-      href="/"
-      className="bg-gradient button-text border-white border text-white px-6 py-2  rounded-md hover:scale-105 duration-500 cursor-pointer"
+    <a
+      href={url}
+      target={link_target}
+      className="bg-gradient button-text border-slate-400 border text-white py-2 px-2  rounded-md hover:scale-110 duration-300 cursor-pointer flex gap-2 items-center"
     >
-      {title}
-    </Link>
+      <span className="text-white">{title}</span>
+      <span className="text-white bg-black rounded-md p-2">
+        <GrLinkNext />
+      </span>
+    </a>
   );
 };
 

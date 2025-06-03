@@ -2,24 +2,21 @@
 import PrimaryButton from "@/ui/buttons/PrimaryButton";
 import SecondaryButton from "@/ui/buttons/SecondaryButton";
 import { GradualSpacing } from "@/ui/text/GradualSpacing";
+import ScrollVelocity from "@/ui/text/ScrollVelocity";
 import { WordShift } from "@/ui/text/WordShift";
 import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col w-full">
-      <div className="w-full relative bg-hero bg-cover bg-fixed bg-opacity-20 bg-center bg-no-repeat global-padding h-[100vh] py-[200px] my-6 rounded-t-lg rounded-b-3xl">
+    <div className="relative flex flex-col items-center w-full">
+      <div className="w-[98vw] max-md:w-[94vw] relative bg-hero max-lg:bg-hero-md bg-cover bg-fixed bg-opacity-20 bg-center bg-no-repeat global-padding h-[100vh] py-[200px] max-md:py-[300px] mt-6 rounded-t-lg rounded-b-3xl">
         <motion.div className="flex flex-col">
           <div className="flex flex-col gap-2 ">
             <h1 className="flex flex-col leading-snug">
               <GradualSpacing text="Hello! I'm Abigael Gem!" />
               <WordShift
                 text="Your Dedicated"
-                words={[
-                  "Creative Designer.",
-                  "Web Developer.",
-                  "Brand Strategist.",
-                ]}
+                words={["UX Designer.", "Web Developer.", "Brand Strategist."]}
               />
             </h1>
             <motion.p
@@ -45,6 +42,10 @@ const Hero = () => {
           </motion.div>
         </motion.div>
       </div>
+      <ScrollVelocity
+        texts={["Web Developer", "UX Designer", "Social Media Manager"]}
+        className="custom-scroll-text custom-font"
+      />
     </div>
   );
 };

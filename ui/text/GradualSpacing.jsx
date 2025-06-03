@@ -17,7 +17,7 @@ export function GradualSpacing({ text = "Gradual Spacing" }) {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             exit="hidden"
             transition={{ duration: 0.5, delay: i * 0.1 }}
-            className="custom-font hero-title font-bold text-white"
+            className="custom-font hero-title font-bold fade-text-title"
           >
             {char === " " ? <span>&nbsp;</span> : char}
           </motion.h2>

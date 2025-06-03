@@ -18,8 +18,16 @@ export function WordShift({
   }, [words.length]);
 
   return (
-    <div className="hero-sub flex gap-4 max-sm:gap-2">
-      <div className="hero-sub custom-font text-gradien">{text}</div>
+    <div className="hero-sub flex gap-2 max-md:gap-2">
+      <motion.div
+        initial={{ opacity: 0, y: -40 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 40 }}
+        transition={{ duration: 0.5 }}
+        className="hero-sub custom-font"
+      >
+        {text}
+      </motion.div>
       <AnimatePresence mode="wait">
         <motion.p
           key={words[index]}

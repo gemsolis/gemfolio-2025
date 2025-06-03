@@ -31,28 +31,30 @@ const SocialMediaProject = () => {
     setCurrentImage(null);
   };
   return (
-    <div>
-      {/* Image Grid */}
-      <div className="global-padding py-20">
+    <div className="mt-[100px] mb-[50px]">
+      <h1 className="global-subheading border-b border-white fade-gradient mb-6">
+        Social Media Ads Design
+      </h1>
+      <div className="w-full flex justify-center py-2">
         <motion.div
           whileInView="show"
           variants={containerVariants}
           initial="hidden"
-          className="flex flex-wrap justify-center items-center gap-8"
+          className="grid-container"
         >
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              variants={childVariants} // Apply child animation
-              className="relative project-size cursor-pointer"
+              variants={childVariants}
+              className="cursor-pointer relative w-full h-[300px] overflow-hidden rounded-lg"
+              onClick={() => openModal(project.modal)}
             >
               <Image
                 src={project.thumbnail}
                 alt={`Thumbnail ${index + 1}`}
                 layout="fill"
-                objectFit="cover"
+                style={{ objectFit: "cover" }}
                 className="rounded-lg transition hover:scale-105 duration-300 hover:rotate-1"
-                onClick={() => openModal(project.modal)}
               />
             </motion.div>
           ))}
@@ -61,17 +63,17 @@ const SocialMediaProject = () => {
       {/* Modal */}
       {isOpen && currentImage && (
         <div
-          className=" fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-50"
+          className=" fixed inset-0 flex items-center justify-center bg-black-glass bg-opacity-80 z-50"
           onClick={closeModal}
         >
           <button
-            className="absolute top-4 right-4 bg-red-700 text-white p-2 rounded-full shadow-md hover:bg-red-900 transition"
+            className="absolute top-4 right-4 bg-red-700 text-white p-2 rounded-full shadow-md hover:bg-red-900 hover:rotate-90 duration-500 transition z-50"
             onClick={closeModal}
           >
             <MdClose size={24} />
           </button>
           <div
-            className="relative w-full max-w-[70%] p-4"
+            className="relative w-full max-w-[70%] max-md:max-w-[100%] p-4"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}

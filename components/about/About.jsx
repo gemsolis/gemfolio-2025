@@ -22,20 +22,23 @@ const childVariants = {
 
 const About = () => {
   return (
-    <div id="about" className="w-full my-[200px] global-padding">
-      <div className="w-full global-flex justify-center items-center mb-[70px]">
+    <div id="about" className="w-full my-[100px] global-padding scroll-margin">
+      <div className="w-full justify-center items-center mb-[70px]">
         <Title title="About Me" subheading="And The Services I Offer" />
       </div>
       <motion.div
         initial="hidden"
         whileInView="show"
         variants={containerVariants}
-        className="global-flex w-full my-10 gap-6 global-padding"
+        className="flex max-xl:flex-col w-full h-full my-10 gap-6"
       >
-        <motion.div variants={childVariants}>
+        <motion.div variants={childVariants} className="w-full h-full">
           <AboutMeCard />
         </motion.div>
-        <motion.div variants={childVariants} className="flex flex-col gap-6">
+        <motion.div
+          variants={childVariants}
+          className="w-full flex flex-col justify-between gap-6"
+        >
           <ServicesCard />
         </motion.div>
       </motion.div>
