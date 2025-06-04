@@ -17,7 +17,7 @@ const FusionFlare = () => {
         </h1>
         <div className="flex flex-col my-4">
           <section className="py-4">
-            <h2 className="global-subheading font-semibold mb-4 fade-gradient">
+            <h2 className="global-cardtitle font-semibold mb-4 fade-gradient">
               Client Overview
             </h2>
             <p className="text-gray-300 leading-relaxed">
@@ -31,10 +31,10 @@ const FusionFlare = () => {
           </section>
 
           <section className="py-4">
-            <h2 className="global-subheading font-semibold mb-4 fade-gradient">
+            <h2 className="global-cardtitle font-semibold mb-4 fade-gradient">
               Client Pain Points
             </h2>
-            <ul className="list-disc text-gray-300 leading-relaxed">
+            <ul className="list-disc list-inside space-y-2 max-md:space-y-1">
               <li className="mb-2">
                 Need for a <strong>strong visual identity</strong>
               </li>
@@ -59,10 +59,10 @@ const FusionFlare = () => {
           </section>
 
           <section className="py-4">
-            <h2 className="global-subheading font-semibold mb-4 fade-gradient">
+            <h2 className="global-cardtitle font-semibold mb-4 fade-gradient">
               Designer Approach
             </h2>
-            <ul className="list-disc list-inside text-gray-300 leading-relaxed">
+            <ul className="list-disc list-inside space-y-2 max-md:space-y-1">
               <li className="mb-2">
                 <strong>Impactful Visual Hero:</strong> The top section
                 immediately captures attention with a large image and clear
@@ -102,10 +102,10 @@ const FusionFlare = () => {
           </section>
 
           <section className="py-4">
-            <h2 className="global-subheading font-semibold mb-4 fade-gradient">
+            <h2 className="global-cardtitle font-semibold mb-4 fade-gradient">
               Results
             </h2>
-            <ul className="list-disc list-inside text-gray-300 leading-relaxed">
+            <ul className="list-disc list-inside space-y-2 max-md:space-y-1">
               <li className="mb-2">
                 <strong>Stronger Brand Presence:</strong> The sophisticated
                 design and high-quality visuals should effectively communicate

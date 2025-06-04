@@ -17,7 +17,7 @@ const WanderQuest = () => {
         </h1>
         <div className="flex flex-col my-4">
           <section className="py-4">
-            <h2 className="global-subheading font-semibold mb-4 fade-gradient">
+            <h2 className="global-cardtitle font-semibold mb-4 fade-gradient">
               Client Overview:
             </h2>
             <p className="mb-4">
@@ -30,10 +30,10 @@ const WanderQuest = () => {
           </section>
 
           <section className="py-4">
-            <h2 className="global-subheading font-semibold mb-4 fade-gradient">
+            <h2 className="global-cardtitle font-semibold mb-4 fade-gradient">
               Client Pain Points:
             </h2>
-            <ul className="list-disc list-inside space-y-2">
+            <ul className="list-disc list-inside space-y-2 max-md:space-y-1">
               <li className="text-sm">
                 The website needs to prioritize{" "}
                 <strong>visual engagement</strong> to avoid overwhelming users
@@ -63,10 +63,10 @@ const WanderQuest = () => {
           </section>
 
           <section className="py-4">
-            <h2 className="global-subheading font-semibold mb-4 fade-gradient">
+            <h2 className="global-cardtitle font-semibold mb-4 fade-gradient">
               Designer Approach:
             </h2>
-            <ul className="list-disc list-inside space-y-2">
+            <ul className="list-disc list-inside space-y-2 max-md:space-y-1">
               <li className="text-sm">
                 Created a <strong>visual storytelling layout</strong> by
                 integrating vibrant imagery and travel scenes to immediately
@@ -102,10 +102,10 @@ const WanderQuest = () => {
           </section>
 
           <section className="py-4">
-            <h2 className="global-subheading font-semibold mb-4 fade-gradient">
+            <h2 className="global-cardtitle font-semibold mb-4 fade-gradient">
               The Results:
             </h2>
-            <ul className="list-disc list-inside space-y-2">
+            <ul className="list-disc list-inside space-y-2 max-md:space-y-1">
               <li className="text-sm">
                 Increased user engagement by presenting visually stimulating and
                 easy-to-navigate content.

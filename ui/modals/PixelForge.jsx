@@ -17,10 +17,10 @@ const PixelForge = () => {
         </h1>
         <div className="flex flex-col my-4">
           <section className="py-4">
-            <h2 className="global-subheading font-semibold mb-4 fade-gradient">
+            <h2 className="global-cardtitle font-semibold mb-4 fade-gradient">
               Client Pain Points:
             </h2>
-            <ul className="list-disc list-inside space-y-2">
+            <ul className="list-disc list-inside space-y-2 max-md:space-y-1">
               <li className="text-sm">
                 <strong>No Existing Online Presence:</strong> PixelForge
                 Creative needed a brand-new website to introduce their services
@@ -49,10 +49,10 @@ const PixelForge = () => {
             </ul>
           </section>
           <section className="py-4">
-            <h2 className="global-subheading font-semibold mb-4 fade-gradient">
+            <h2 className="global-cardtitle font-semibold mb-4 fade-gradient">
               Designer Approach:
             </h2>
-            <ul className="list-disc list-inside space-y-2">
+            <ul className="list-disc list-inside space-y-2 max-md:space-y-1">
               <li className="text-sm">
                 <strong>Impactful First Impression:</strong> Crafted a bold hero
                 section with dynamic typography and engaging CTAs ("Get Started"
@@ -91,10 +91,10 @@ const PixelForge = () => {
             </ul>
           </section>
           <section>
-            <h2 className="global-subheading font-semibold mb-4 fade-gradient">
+            <h2 className="global-cardtitle font-semibold mb-4 fade-gradient">
               The Results:
             </h2>
-            <ul className="list-disc list-inside space-y-2">
+            <ul className="list-disc list-inside space-y-2 max-md:space-y-1">
               <li className="text-sm">
                 <strong>Professional Digital Launch:</strong> PixelForge
                 Creative successfully entered the digital space with a polished,

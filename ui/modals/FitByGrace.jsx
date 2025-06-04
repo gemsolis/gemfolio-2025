@@ -18,7 +18,7 @@ const FitByGrace = () => {
         </h1>
         <div className="flex flex-col my-4">
           <section className="py-4">
-            <h2 className="global-subheading font-semibold mb-4 fade-gradient">
+            <h2 className="global-cardtitle font-semibold mb-4 fade-gradient">
               Client Overview:
             </h2>
             <p className="mb-4">
@@ -30,10 +30,10 @@ const FitByGrace = () => {
             </p>
           </section>
           <section className="py-4">
-            <h2 className="global-subheading font-semibold mb-4 fade-gradient">
+            <h2 className="global-cardtitle font-semibold mb-4 fade-gradient">
               Client Pain Points:
             </h2>
-            <ul className="list-disc list-inside space-y-2">
+            <ul className="list-disc list-inside space-y-2 max-md:space-y-1">
               <li className="text-sm">
                 <strong>Difficulty Standing Out:</strong> The brand needs a
                 distinctive presence to differentiate itself from generic
@@ -87,7 +87,7 @@ const FitByGrace = () => {
             </ul>
           </section>
           <section className="py-4">
-            <h2 className="global-subheading font-semibold mb-4 fade-gradient">
+            <h2 className="global-cardtitle font-semibold mb-4 fade-gradient">
               Designer Approach:
             </h2>
             <ul className="list-disc list-inside space-y-2">
@@ -133,7 +133,7 @@ const FitByGrace = () => {
             </ul>
           </section>
           <section>
-            <h2 className="global-subheading font-semibold mb-4 fade-gradient">
+            <h2 className="global-cardtitle font-semibold mb-4 fade-gradient">
               The Results:
             </h2>
             <ul className="list-disc list-inside space-y-2">

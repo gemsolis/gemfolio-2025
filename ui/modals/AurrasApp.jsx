@@ -17,7 +17,7 @@ const AurrasApp = () => {
         {/* Text content takes 50% */}
         <div className="text-slate-400 flex flex-col gap-6">
           <section>
-            <h2 className="global-subheading font-semibold mb-4 fade-gradient">
+            <h2 className="global-cardtitle font-semibold mb-4 fade-gradient">
               About Aurras
             </h2>
             <p>
@@ -31,7 +31,7 @@ const AurrasApp = () => {
           </section>
 
           <section>
-            <h2 className="global-subheading font-semibold mb-4 fade-gradient">
+            <h2 className="global-cardtitle font-semibold mb-4 fade-gradient">
               Role
             </h2>
             <p>
