@@ -31,6 +31,7 @@ const Navbar = () => {
         initial={{ opacity: 0, x: 100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
         className="bg-black-glass bg-opacity-45 px-4 py-2 rounded-md flex gap-2 items-center"
       >
         <Image src={logo} width={40} alt="Abigael Gem" />
@@ -42,7 +43,7 @@ const Navbar = () => {
 
   return (
     <motion.div className="w-full my-8 fixed rounded-md z-40" id="home">
-      <div className="flex mx-6 justify-between items-start relative">
+      <div className="flex mx-6 max-md:mx-4 justify-between items-start relative">
         {MemoizedLogo}
 
         <div></div>

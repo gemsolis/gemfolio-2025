@@ -10,13 +10,13 @@ const Tools = () => {
   return (
     <div
       id="tools"
-      className="w-full mb-[200px] flex global-padding scroll-margin"
+      className="w-full mb-[100px] flex global-padding scroll-margin"
     >
       <motion.div
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false, amount: 0.2 }}
+        viewport={{ once: true }}
         className="w-full glass p-10 rounded-md flex flex-col gap-2 max-lg:items-center border border-t border-slate-700"
       >
         <div className="flex justify-center mb-10">
@@ -32,10 +32,10 @@ const Tools = () => {
               <motion.div
                 key={i}
                 variants={childVariants}
-                className="flex items-center gap-4 px-4 py-2 glass rounded-md border-b border-slate-700"
+                className="flex items-center gap-4 px-4 py-2 max-sm:px-2 glass rounded-md border-b border-slate-700"
               >
                 <Image src={src} width={width} alt={alt} />
-                <span className="text-lg max-md:text-sm text-slate-100 custom-font">
+                <span className="text-lg max-md:text-[12px] text-slate-100 custom-font max-sm:hidden">
                   {alt}
                 </span>
               </motion.div>

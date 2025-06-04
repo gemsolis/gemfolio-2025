@@ -32,7 +32,7 @@ const SocialMediaProject = () => {
   };
   return (
     <div className="mt-[100px] mb-[50px]">
-      <h1 className="global-subheading border-b border-white fade-gradient mb-6">
+      <h1 className="global-cardtitle border-b border-white fade-gradient mb-6">
         Social Media Ads Design
       </h1>
       <div className="w-full flex justify-center py-2">
@@ -40,6 +40,7 @@ const SocialMediaProject = () => {
           whileInView="show"
           variants={containerVariants}
           initial="hidden"
+          viewport={{ once: true }}
           className="grid-container"
         >
           {projects.map((project, index) => (

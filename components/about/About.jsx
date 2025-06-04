@@ -30,6 +30,7 @@ const About = () => {
         initial="hidden"
         whileInView="show"
         variants={containerVariants}
+        viewport={{ once: true }}
         className="flex max-xl:flex-col w-full h-full my-10 gap-6"
       >
         <motion.div variants={childVariants} className="w-full h-full">
@@ -37,7 +38,7 @@ const About = () => {
         </motion.div>
         <motion.div
           variants={childVariants}
-          className="w-full flex flex-col justify-between gap-6"
+          className="w-full flex flex-col justify-between gap-4"
         >
           <ServicesCard />
         </motion.div>

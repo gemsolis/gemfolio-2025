@@ -22,6 +22,7 @@ const Contacts = () => {
         whileInView="show"
         variants={containerXReverse}
         initial="hidden"
+        viewport={{ once: true }}
         className="footer-heading uppercase flex flex-col gap-4 items-center"
       >
         {/* <motion.span
@@ -31,7 +32,11 @@ const Contacts = () => {
         >
           <GoArrowDownRight />
         </motion.span> */}
-        <motion.span variants={childVariants} className="fade-text-title">
+        <motion.span
+          variants={childVariants}
+          viewport={{ once: true }}
+          className="fade-text-title"
+        >
           LET'S GET IN TOUCH!
         </motion.span>
       </motion.h2>
@@ -39,9 +44,10 @@ const Contacts = () => {
         whileInView="show"
         variants={containerXReverse}
         initial="hidden"
+        viewport={{ once: true }}
         className="w-full flex flex-col justify-center items-center gap-6"
       >
-        <motion.div variants={childXVariants}>
+        <motion.div variants={childXVariants} viewport={{ once: true }}>
           <Link
             href="mailto:gemsolis.dev@gmail.com"
             className="footer-email underline fade-text-title"
@@ -55,6 +61,7 @@ const Contacts = () => {
             whileInView="show"
             variants={containerXReverse}
             initial="hidden"
+            viewport={{ once: true }}
             className="flex gap-4 text-orange-500"
           >
             <motion.div variants={childVariants}>

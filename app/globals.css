@@ -33,7 +33,7 @@ body {
     rgb(26, 22, 83) 100%
   );
   color: #fff;
-  background-image: url(../public/assets/images/bg_image.jpg);
+  background-image: url(../public/assets/images/bg-main.png);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: top center;
@@ -43,7 +43,7 @@ body {
 }
 
 .global-padding {
-  @apply px-10 max-sm:px-6 max-md:px-6 max-lg:px-10 max-xl:px-12;
+  @apply px-8 max-sm:px-4 max-md:px-6 max-lg:px-10 max-xl:px-12;
 }
 
 .global-flex {
@@ -51,11 +51,15 @@ body {
 }
 
 .global-title {
-  @apply text-[52px] max-sm:text-[24px] max-md:text-[38px] max-lg:text-[46px] max-xl:text-[52px];
+  @apply text-[52px] max-sm:text-[26px] max-md:text-[38px] max-lg:text-[46px] max-xl:text-[52px];
 }
 
 .global-subheading {
-  @apply text-[28px] max-sm:text-[18px] max-md:text-[20px] max-lg:text-[24px] max-xl:text-[28px];
+  @apply text-[28px] max-sm:text-[14px] max-md:text-[20px] max-lg:text-[24px] max-xl:text-[28px];
+}
+
+.global-cardtitle {
+  @apply text-[20px] max-sm:text-[18px] max-md:text-[16px] max-lg:text-[20px] max-xl:text-[20px];
 }
 
 .button-text {
@@ -63,11 +67,11 @@ body {
 }
 
 .hero-title {
-  @apply text-[70px] max-sm:text-[36px] max-md:text-[40px] max-lg:text-[52px] max-xl:text-[70px];
+  @apply text-[70px] max-sm:text-[30px] max-md:text-[40px] max-lg:text-[52px] max-xl:text-[70px];
 }
 
 .hero-sub {
-  @apply text-[50px] max-sm:text-[24px] max-md:text-[26px] max-lg:text-[30px] max-xl:text-[45px];
+  @apply text-[50px] max-sm:text-[18px] max-md:text-[26px] max-lg:text-[30px] max-xl:text-[45px];
 }
 
 .footer-heading {
@@ -104,14 +108,6 @@ li {
 
 .custom-font {
   font-family: "Clash Display SemiBold", sans-serif;
-}
-
-.bg-hero {
-  background-image: url(../public/assets/images/bg-main-dark.png);
-}
-
-.bg-hero-md {
-  background-image: url(../public/assets/images/bg-hero.png);
 }
 
 .bg-gradient {
@@ -187,10 +183,9 @@ textarea {
   border-radius: 1rem;
   border: 1px solid #313131;
   height: 100%;
-  overflow: hidden;
   --mouse-x: 50%;
   --mouse-y: 50%;
-  --spotlight-color: rgba(255, 7, 247, 0.05);
+  --spotlight-color: rgba(255, 134, 86, 0.623);
 }
 
 .card-spotlight::before {
@@ -203,7 +198,7 @@ textarea {
   background: radial-gradient(
     circle at var(--mouse-x) var(--mouse-y),
     var(--spotlight-color),
-    transparent 30%
+    transparent 20%
   );
   opacity: 0;
   transition: opacity 0.5s ease;

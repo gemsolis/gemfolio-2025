@@ -8,23 +8,23 @@ import Link from "next/link";
 const AboutMeCard = () => {
   return (
     <SpotlightCard
-      className="custom-spotlight-card glass duration-500 py-2"
-      spotlightColor="rgba(1, 78, 186, 0.424)"
+      className="custom-spotlight-card glass duration-500 py-6 h-full"
+      spotlightColor="rgba(255, 134, 86, 0.400)"
     >
-      <div className="rounded-[1rem] h-full flex flex-col items-center justify-center py-4 p-4">
-        <div className="w-[300px] h-[300px] overflow-hidden rounded-full">
+      <div className="rounded-[1rem] h-full flex flex-col items-center justify-center p-4">
+        <div className="w-[250px] h-[250px] overflow-hidden rounded-full">
           <Image
             src={profilepic}
             alt="Profile Pic"
-            width={300}
-            height={300}
+            width={250}
+            height={250}
             className="object-cover"
           />
         </div>
 
         <div className="flex flex-col gap-4 justify-center items-center py-6 p-4 w-full">
           <div className="flex flex-col gap-4">
-            <span className="fade-gradient global-subheading mt-2 custom-font w-full">
+            <span className="text-orange-500 global-cardtitle text-center mt-10 custom-font w-full">
               Hi there! Welcome to my portfolio!
             </span>
             <p className=" text-slate-400">

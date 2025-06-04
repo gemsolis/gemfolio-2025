@@ -59,7 +59,7 @@ const WebProjects = () => {
 
   return (
     <div className="mb-[100px] mt-[50px]">
-      <h1 className="global-subheading py-2 fade-gradient w-full border-b border-b-white mb-2">
+      <h1 className="global-cardtitle py-2 fade-gradient w-full border-b border-b-white mb-2">
         Web Development
       </h1>
       <motion.div className="flex flex-col gap-4">
@@ -67,11 +67,13 @@ const WebProjects = () => {
           whileInView="show"
           variants={containerVariants}
           initial="hidden"
+          viewport={{ once: true }}
           className="w-full py-2 items-center"
         >
           {projects.slice(0, 1).map((project) => (
             <motion.div
               variants={childVariants}
+              viewport={{ once: true }}
               key={project.title}
               className="glass w-full rounded-md border-b border-b-slate-600 h-auto cursor-pointer relative"
             >
@@ -89,7 +91,7 @@ const WebProjects = () => {
                 </div>
 
                 <div className="lg:w-[80%] mb-5 px-5 py-4">
-                  <h4 className="font-black custom-font fade-gradient text-lg pt-4">
+                  <h4 className="font-black custom-font text-orange-500 global-cardtitle text-lg pt-4">
                     {project.title}
                   </h4>
                   <div className="item-center my-3 flex flex-wrap gap-2">
@@ -122,12 +124,14 @@ const WebProjects = () => {
           whileInView="show"
           variants={containerVariants}
           initial="hidden"
+          viewport={{ once: true }}
           className="w-full py-2 grid-layout items-center"
         >
           {projects.slice(1).map((project) => (
             <motion.div
               key={project.title}
               variants={childVariants}
+              viewport={{ once: true }}
               className="glass rounded-md  border-b border-b-slate-600 h-[560px] cursor-pointer "
             >
               <div className="w-full overflow-hidden rounded-lg">
@@ -145,7 +149,7 @@ const WebProjects = () => {
                 </div>
 
                 <div className="mb-5 px-5 py-4">
-                  <h4 className="custom-font font-black fade-gradient text-lg pt-2">
+                  <h4 className="custom-font font-black text-orange-500 global-cardtitle pt-2">
                     {project.title}
                   </h4>
                   <div className="item-center my-3 flex flex-wrap gap-2">

@@ -31,7 +31,7 @@ const HeroV2 = () => {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 40 }}
                   transition={{ duration: 0.5, delay: 1 }}
-                  className="text-[1rem] max-md:text-[0.9rem] mb-4 text-slate-400 mt-2 max-l-xl:px-2 lg:w-1/2"
+                  className="text-[1rem] max-md:text-[0.8rem] mb-4 text-slate-400 mt-2 max-l-xl:px-2 lg:w-1/2"
                 >
                   I specialize in crafting engaging and results-driven social
                   media strategies, designing seamless and intuitive user

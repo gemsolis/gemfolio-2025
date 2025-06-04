@@ -25,7 +25,7 @@ const UxProject = () => {
 
   return (
     <div className="my-[100px]">
-      <h1 className="global-subheading fade-gradient w-full border-b border-b-white mb-6">
+      <h1 className="global-cardtitle fade-gradient w-full border-b border-b-white mb-6">
         User Experience Design
       </h1>
       <div className="w-full flex flex-col gap-10 justify-center">
@@ -33,12 +33,14 @@ const UxProject = () => {
           whileInView="show"
           variants={containerVariants}
           initial="hidden"
+          viewport={{ once: true }}
           className="flex w-full gap-10  global-flex  "
         >
           {projects.slice(0, 2).map((project, index) => (
             <motion.div
               key={index}
               variants={childVariants}
+              viewport={{ once: true }}
               className="relative cursor-pointer w-full h-[400px] overflow-hidden rounded-lg flex items-start gap-5"
               onClick={() => openModal(project.modal)}
             >
@@ -52,7 +54,7 @@ const UxProject = () => {
 
               <div className="absolute w-full bottom-0 px-4 py-4 gradient-container">
                 <h2 className="flex flex-col gap-2">
-                  <span className="global-subheading">{project.title}</span>
+                  <span className="global-cardtitle">{project.title}</span>
                   <div className="flex gap-2">
                     <span className="text-sm py-1 px-2 border border-orange-500 rounded-md">
                       {project.type}
@@ -70,12 +72,14 @@ const UxProject = () => {
           whileInView="show"
           variants={containerVariants}
           initial="hidden"
+          viewport={{ once: true }}
           className="grid-container"
         >
           {projects.slice(2, 6).map((project, index) => (
             <motion.div
               key={index + 1}
               variants={childVariants}
+              viewport={{ once: true }}
               className="cursor-pointer relative w-full h-[400px] overflow-hidden rounded-lg"
               onClick={() => openModal(project.modal)}
             >
